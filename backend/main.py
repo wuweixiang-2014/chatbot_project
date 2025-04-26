@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from routers import auth, conversations, chat, roles, users
 import uvicorn
@@ -7,16 +7,32 @@ from database import engine, Base
 from models import User, Role, Permission, Conversation, Message
 from sqlalchemy.orm import Session
 from database import get_db
+from pydantic import BaseModel
+from typing import List, Optional
+import sqlite3
+import hashlib
+import jwt
+import time
+from datetime import datetime, timedelta
+import os
+import json
+import uuid
 
-app = FastAPI()
+app = FastAPI(
+    title="Chatbot API",
+    description="A simple chatbot API",
+    version="1.0.0",
+    docs_url=None,  # 禁用Swagger文档
+    redoc_url=None,  # 禁用ReDoc文档
+)
 
-# 配置CORS
+# 简化CORS配置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 允许所有来源
-    allow_credentials=True,
-    allow_methods=["*"],
+    allow_origins=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
+    max_age=3600,
 )
 
 # 注册路由
