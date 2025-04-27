@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "set PORT=3000 && set HOST=0.0.0.0 && react-scripts start",
-    "build": "NODE_OPTIONS=--max-old-space-size=1024 react-scripts build",
+    "build": "set NODE_OPTIONS=--max-old-space-size=2048 && react-scripts build --cache --no-source-map --no-optimization --no-minify",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.8"
   }
 }

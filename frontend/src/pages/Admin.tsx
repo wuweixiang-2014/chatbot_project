@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Card, Row, Col, Statistic, Upload, Button, message, Table, Alert, Tabs, Input, Form, Modal } from 'antd';
+import Layout from 'antd/lib/layout';
+import Card from 'antd/lib/card';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Statistic from 'antd/lib/statistic';
+import Upload from 'antd/lib/upload';
+import Button from 'antd/lib/button';
+import message from 'antd/lib/message';
+import Table from 'antd/lib/table';
+import Alert from 'antd/lib/alert';
+import Tabs from 'antd/lib/tabs';
+import Input from 'antd/lib/input';
+import Form from 'antd/lib/form';
+import Modal from 'antd/lib/modal';
+import type { UploadProps } from 'antd/lib/upload';
 import { UserOutlined, MessageOutlined, RobotOutlined, UploadOutlined, PlusOutlined } from '@ant-design/icons';
-import type { UploadProps } from 'antd';
 import axios from 'axios';
 
 const { Content } = Layout;

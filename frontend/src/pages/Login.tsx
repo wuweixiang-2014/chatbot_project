@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, message, Spin, Alert } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Button from 'antd/lib/button';
+import message from 'antd/lib/message';
+import Spin from 'antd/lib/spin';
+import Alert from 'antd/lib/alert';
+import UserOutlined from '@ant-design/icons/lib/icons/UserOutlined';
+import LockOutlined from '@ant-design/icons/lib/icons/LockOutlined';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { API_CONFIG } from '../config';

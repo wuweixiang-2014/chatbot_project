@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Layout, Input, Button, List, Avatar, message, Menu, Modal, Form, Input as AntInput } from 'antd';
+import Layout from 'antd/lib/layout';
+import Input from 'antd/lib/input';
+import Button from 'antd/lib/button';
+import List from 'antd/lib/list';
+import Avatar from 'antd/lib/avatar';
+import message from 'antd/lib/message';
+import Menu from 'antd/lib/menu';
+import Modal from 'antd/lib/modal';
+import Form from 'antd/lib/form';
 import { SendOutlined, UserOutlined, RobotOutlined, PlusOutlined, DeleteOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Button, Space, Modal, Form, Input, message, Select } from 'antd';
+import Table from 'antd/lib/table';
+import Button from 'antd/lib/button';
+import Space from 'antd/lib/space';
+import Modal from 'antd/lib/modal';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import message from 'antd/lib/message';
+import Select from 'antd/lib/select';
 import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';

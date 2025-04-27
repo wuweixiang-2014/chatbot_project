@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Select, Space, Typography } from 'antd';
+import Table from 'antd/lib/table';
+import Select from 'antd/lib/select';
+import Space from 'antd/lib/space';
+import Typography from 'antd/lib/typography';
 import { UserOutlined, RobotOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
