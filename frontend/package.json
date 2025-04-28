@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "set PORT=3000 && set HOST=0.0.0.0 && react-scripts start",
-    "build": "set NODE_OPTIONS=--max-old-space-size=2048 && react-scripts build --cache --no-source-map --no-optimization --no-minify",
+    "build": "set NODE_OPTIONS=--max-old-space-size=2048 --optimize-for-size --gc=incremental && react-scripts build --cache --no-source-map --no-optimization --no-minify",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
