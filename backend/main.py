@@ -69,7 +69,7 @@ async def startup_event():
         # 检查admin用户是否存在
         admin_user = db.query(User).filter(User.username == "admin").first()
         if not admin_user:
-            from auth import get_password_hash
+            from routers.auth import get_password_hash
             admin_user = User(
                 username="admin",
                 hashed_password=get_password_hash("admin123"),
