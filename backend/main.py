@@ -87,4 +87,11 @@ async def root():
     return {"message": "欢迎使用聊天机器人API"}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True,
+        reload_dirs=["."],
+        reload_includes=["*.py"]
+    ) 
